@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<!-- 
+    This file is part of FreeSafe.
+
+    FreeSafe is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    FreeSafe is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<!-- This file includes all javascript and pages, which are needed -->
+<html>
+	<head>
+		<title>FreeSafe</title>
+        <style type="text/css">
+            #datapool {
+                display: none
+            }
+
+            #license, #license a {
+                color: gray;
+                font-size: smaller;
+                padding-top: 10em;
+            }
+        </style>
+        <script language="javascript">
+        var bigone = false;
+        </script>
+        <script src="js/passgen.js"></script>
+		<script src="js/crypt/pidcrypt.js"></script> 
+		<script src="js/crypt/pidcrypt_util.js"></script> 
+		<script src="js/crypt/md5.js"></script><!--needed for key and iv generation--> 
+		<script src="js/crypt/aes_core.js"></script><!--needed block en-/decryption--> 
+		<script src="js/crypt/aes_ctr.js"></script><!--needed for ctr mode--> 
+        <script src="js/helper.js"></script>
+        <script src="js/webpages.js"></script>
+        <script src="js/init.js"></script>
+        <script src="js/ajax.js"></script>
+        <script src="js/createscripts.js"></script>
+        <script src="js/loginscripts.js"></script>
+        <script src="js/add.js"></script>
+        <script src="js/get.js"></script>
+	</head>
+	<body onload="init()">
+        <div id="theBody"></div>
+        <div id="datapool">
+		    <div name="include" id="webpages/create.html"></div>	
+		    <div name="include" id="webpages/login.html"></div>	
+		    <div name="include" id="webpages/app.html"></div>	
+		    <div name="include" id="webpages/add.html"></div>	
+		    <div name="include" id="webpages/get.html"></div>	
+        </div>
+        <div id="footer"><br/><br/><br/>
+        <div id="versionString">Version 0.0.3</div>
+        <div id="license">
+            <p>This file is part of FreeSafe.</p>
+
+    <p>FreeSafe is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.</p>
+
+    <p>FreeSafe is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.</p>
+
+    <p>You should have received a copy of the GNU General Public License
+    along with Foobar.  If not, see 
+    <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>.
+    </p>
+        </div>
+        </div>
+	</body>
+</html>
